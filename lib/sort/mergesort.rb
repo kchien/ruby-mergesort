@@ -10,5 +10,9 @@ module Sort
         list
       end
     end
+
+    def midpoint_of(list)
+      list.length / 2
+    end
   end
 end
