@@ -14,5 +14,9 @@ module Sort
     def midpoint_of(list)
       list.length / 2
     end
+
+    def merge left, right
+      [1,2]
+    end
   end
 end

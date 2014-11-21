@@ -20,4 +20,8 @@ RSpec.describe Sort::Mergesort do
   it "determines the midpoint of an even list" do
     expect(Sort::Mergesort.new.midpoint_of([1,2,3,4])).to eq 2
   end
+
+  it "merges two arrays of one element each, where the 'left' array is smaller than the 'right'" do
+    expect(Sort::Mergesort.new.merge([1], [2])).to eq [1,2]
+  end
 end
