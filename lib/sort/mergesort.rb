@@ -16,7 +16,11 @@ module Sort
     end
 
     def merge left, right
-      [1,2]
+      if right[0] > left[0]
+        [left[0], right[0]]
+      else
+        [right[0], left[0]]
+      end
     end
   end
 end
