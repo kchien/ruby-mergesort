@@ -29,5 +29,14 @@ RSpec.describe Sort::Mergesort do
     it "merges two arrays of one element each, where the 'right' array is smaller than the 'left'" do
       expect(Sort::Mergesort.new.merge([4], [3])).to eq [3,4]
     end
+
+    context "arrays to merge have two elements each" do
+      it "merges the two arrays when they are already in order" do
+        expect(Sort::Mergesort.new.merge([1,2], [3,4])).to eq [1,2, 3,4]
+      end
+
+      it "merges the two arrays when they are not in order"
+
+    end
   end
 end

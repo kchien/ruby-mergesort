@@ -16,11 +16,23 @@ module Sort
     end
 
     def merge left, right
-      if right[0] > left[0]
-        [left[0], right[0]]
-      else
-        [right[0], left[0]]
+      result = []
+      i = 0
+      j = 0
+      while (result.length < (left.length + right.length))
+       if j == right.length
+          #all done on right; put all of left in result
+	  result.concat left
+       elsif i < left.length && left[i] < right[j]
+	  result << left[i]
+          i = i + 1
+        else
+          result << right[j]
+	  j = j + 1
+	end
       end
+      result
     end
+
   end
 end
